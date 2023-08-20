@@ -1,4 +1,4 @@
 camsnapping.keybind.snap_horizontal=Snap Camera Horizontally
 camsnapping.keybind.snap_vertical=Snap Camera Vertically
-camsnapping.keybind.rotate_left=Move Cam Left 90°
-camsnapping.keybind.rotate_right=Move Cam Right 90°
+camsnapping.keybind.rotate_left=Move Camera Left 90°
+camsnapping.keybind.rotate_right=Move Camera Right 90°
