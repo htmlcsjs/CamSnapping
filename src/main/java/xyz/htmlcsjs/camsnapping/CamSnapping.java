@@ -17,16 +17,21 @@ public class CamSnapping {
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MODID);
     @SideOnly(Side.CLIENT)
-    public static final KeyBinding horizontalBind = new KeyBinding("keybind.snap_horizontal", KeyConflictContext.IN_GAME, KeyModifier.SHIFT, Keyboard.KEY_0, "Cam Snapping");
+    public static final KeyBinding horizontalBind = new KeyBinding("camsnapping.keybind.snap_horizontal", KeyConflictContext.IN_GAME, KeyModifier.SHIFT, Keyboard.KEY_0, "Cam Snapping");
+    @SideOnly(Side.CLIENT)
+    public static final KeyBinding verticalBind = new KeyBinding("camsnapping.keybind.snap_vertical", KeyConflictContext.IN_GAME, KeyModifier.SHIFT, Keyboard.KEY_9, "Cam Snapping");
+    @SideOnly(Side.CLIENT)
+    public static final KeyBinding rotateLeft = new KeyBinding("camsnapping.keybind.rotate_left", KeyConflictContext.IN_GAME, KeyModifier.SHIFT, Keyboard.KEY_LEFT, "Cam Snapping");
+    @SideOnly(Side.CLIENT)
+    public static final KeyBinding rotateRight = new KeyBinding("camsnapping.keybind.rotate_right", KeyConflictContext.IN_GAME, KeyModifier.SHIFT, Keyboard.KEY_RIGHT, "Cam Snapping");
 
     @Mod.EventHandler
     public void preInit(FMLInitializationEvent event) {
         if (event.getSide() == Side.CLIENT) {
             ClientRegistry.registerKeyBinding(horizontalBind);
+            ClientRegistry.registerKeyBinding(verticalBind);
+            ClientRegistry.registerKeyBinding(rotateLeft);
+            ClientRegistry.registerKeyBinding(rotateRight);
         }
     }
-
-
-
-
 }
